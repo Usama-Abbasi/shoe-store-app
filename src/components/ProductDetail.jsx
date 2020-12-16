@@ -9,8 +9,7 @@ export default function ProductDetail() {
     const { productid } = useParams();
     const product = Products[productid];
     console.log(product);
-    const { _id, title, src, description, price, count, content } = product
-    // console.log(product);
+    const { _id, title, src, description, price,content } = product
     return (
         <>
 
@@ -21,7 +20,6 @@ export default function ProductDetail() {
                         <h2>{title}</h2>
                         <span>${price}</span>
                     </div>
-                    {/* <Colors colors={item.colors} /> */}
                     <p>{description}</p>
                     <p>{content}</p>
                     <Link to="/cart" className="cart" onClick={()=>addCart(title)}>

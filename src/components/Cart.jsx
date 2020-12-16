@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext} from 'react'
 import product from '..//json/shoe.json';
 import { CartContext } from '..//context/cartContext';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ export default function Cart() {
     let total = 0;
     const price = productId.map(key => product[key].price);
     price.map(item => total += item);
-    if (productId.length == 0) {
+    if (productId.length === 0) {
         return <h2 style={{ textAlign: "center" }}>Nothings Product</h2>
     }
     else {
